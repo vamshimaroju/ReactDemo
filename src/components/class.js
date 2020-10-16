@@ -16,11 +16,13 @@ class ClassComponent extends React.Component{
     componentDidMount(){
         this.changeComponent();
     }
+    
     changeComponent(){
 
         if(this.state.view ){
             ReactDOM.render( <ReactLifeCycle name="apple" {...this.props}/>,document.getElementById('updateComponent'));
             this.state.view = false
+
         }else{
             ReactDOM.render( <FunctionComponent {...this.props}/>,document.getElementById('updateComponent'));
             this.state.view = true

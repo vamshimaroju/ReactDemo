@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route,Switch} from 'react-router-dom';
 
 // CSS file
 import './App.css';
+import ApiComponent from './components/ApiComponent';
 import ClassComponent from './components/class';
 import ClassWithProps from './components/classWithProps';
 import { ClassWithState, ClassWithStateProps } from './components/classWithState';
@@ -16,7 +17,7 @@ function App() {
   return (
     <div className="row">
       <Router>
-          <nav className="col-md-3 col-sm-12 nav nav-bar">
+          <nav className="col-md-3 col-sm-12 nav flex-column nav-pills">
             <a href="/classComponent" className="nav-link">Class Component</a>
             <a href="/funComponent" className="nav-link">Function Component</a>
             <a href="/funWithProps" className="nav-link">Function with props</a>
@@ -26,8 +27,9 @@ function App() {
             <a href="/classWithState" className="nav-link">Class with state</a>
             <a href="/classWithStateProps" className="nav-link">Class with state & props</a>
             <a href="/reactLifeCycle" className="nav-link">React life cycle</a>
+            <a href="/apiCalls" className="nav-link">Api Calls</a>
           </nav>
-          <div className="col-md-9 col-sm-12 nav nav-bar">
+          <div className="col-md-9 col-sm-12 nav ">
             <Switch>  
               {/* <Route path="/" exact component={App}/> */}
               <Route path="/classComponent" component={ClassComponent}/>
@@ -41,6 +43,7 @@ function App() {
               <Route path="/classWithState" component={ClassWithState}/>
               <Route path="/classWithStateProps" render={(props)=><ClassWithStateProps name="vamshi maroju" {...props}/>}/>
               <Route path="/reactLifeCycle" render={(props)=><ReactLifeCycle name="react life cycle" {...props}/>}/>
+              <Route path="/apiCalls" component={ApiComponent}/>
             </Switch>
           </div>
       </Router>      

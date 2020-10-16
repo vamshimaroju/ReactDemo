@@ -21,6 +21,10 @@ class ClassWithProps extends React.Component{
         </div>
         return htmlTag;
     }
+
+    componentDidCatch(e){
+        console.log(e.message);
+    }
 }
 
 export default ClassWithProps;

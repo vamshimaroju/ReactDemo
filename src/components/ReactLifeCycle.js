@@ -42,6 +42,7 @@ class ReactLifeCycle extends React.Component{
     }
     
     render(){
+        console.log("render method");
         const htmlTag = <div>
             <div>React life cycle</div>
             <button onClick={this.updateStateParam}>Update state value</button>

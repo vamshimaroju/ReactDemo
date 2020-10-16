@@ -1,10 +1,14 @@
 import React from 'react';
+import FullPageLoader from '../cssUtils/FullPageLoader';
 
 function FunctionComponent(){
 
     return (
-        <div>
+        <div className="container">
             <h1>Function component</h1>
+            
+            
+            {/* <FullPageLoader/> */}
         </div>
     )
 }
